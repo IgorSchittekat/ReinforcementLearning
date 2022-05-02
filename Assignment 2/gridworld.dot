@@ -1,0 +1,143 @@
+digraph G {
+	rankdir=LR;
+	node [shape = ellipse]; 
+    0;
+    1;
+    2;
+    3;
+    4;
+    5;
+    6;
+    7;
+    8;
+    9;
+    10;
+    Terminal;
+    node [shape = point, style = filled, color = black, label = "", height = 0.1 ];
+    p0N[ xlabel = "N" ];
+    p0E[ xlabel = "E" ];
+    p0S[ xlabel = "S" ];
+    p0W[ xlabel = "W" ];
+    p1N[ xlabel = "N" ];
+    p1E[ xlabel = "E" ];
+    p1S[ xlabel = "S" ];
+    p1W[ xlabel = "W" ];
+    p2N[ xlabel = "N" ];
+    p2E[ xlabel = "E" ];
+    p2S[ xlabel = "S" ];
+    p2W[ xlabel = "W" ];
+    p3N[ xlabel = "N" ];
+    p3E[ xlabel = "E" ];
+    p3S[ xlabel = "S" ];
+    p3W[ xlabel = "W" ];
+    p4N[ xlabel = "N" ];
+    p4E[ xlabel = "E" ];
+    p4S[ xlabel = "S" ];
+    p4W[ xlabel = "W" ];
+    p5N[ xlabel = "N" ];
+    p5E[ xlabel = "E" ];
+    p5S[ xlabel = "S" ];
+    p5W[ xlabel = "W" ];
+    p7N[ xlabel = "N" ];
+    p7E[ xlabel = "E" ];
+    p7S[ xlabel = "S" ];
+    p7W[ xlabel = "W" ];
+    p8N[ xlabel = "N" ];
+    p8E[ xlabel = "E" ];
+    p8S[ xlabel = "S" ];
+    p8W[ xlabel = "W" ];
+    p9N[ xlabel = "N" ];
+    p9E[ xlabel = "E" ];
+    p9S[ xlabel = "S" ];
+    p9W[ xlabel = "W" ];
+    p6E[ xlabel = "Exit" ];
+    p10E[ xlabel = "Exit" ];
+
+    0 -> p0N;
+    p0N -> 4 [label="1/-0.1"]
+    0 -> p0E;
+    p0E -> 1 [label="1/-0.1"]
+    0 -> p0S;
+    p0S -> 0 [label="1/-0.1"]
+    0 -> p0W;
+    p0W -> 0 [label="1/-0.1"]
+
+    1 -> p1N;
+    p1N -> 1 [label="1/-0.1"]
+    1 -> p1E;
+    p1E -> 2 [label="1/-0.1"]
+    1 -> p1S;
+    p1S -> 1 [label="1/-0.1"]
+    1 -> p1W;
+    p1W -> 0 [label="1/-0.1"]
+
+    2 -> p2N;
+    p2N -> 5 [label="1/-0.1"]
+    2 -> p2E;
+    p2E -> 3 [label="1/-0.1"]
+    2 -> p2S;
+    p2S -> 2 [label="1/-0.1"]
+    2 -> p2W;
+    p2W -> 1 [label="1/-0.1"]
+
+    3 -> p3N;
+    p3N -> 6 [label="1/-0.1"]
+    3 -> p3E;
+    p3E -> 3 [label="1/-0.1"]
+    3 -> p3S;
+    p3S -> 3 [label="1/-0.1"]
+    3 -> p3W;
+    p3W -> 2 [label="1/-0.1"]
+
+    4 -> p4N;
+    p4N -> 7 [label="1/-0.1"]
+    4 -> p4E;
+    p4E -> 4 [label="1/-0.1"]
+    4 -> p4S;
+    p4S -> 0 [label="1/-0.1"]
+    4 -> p4W;
+    p4W -> 4 [label="1/-0.1"]
+
+    5 -> p5N;
+    p5N -> 9 [label="1/-0.1"]
+    5 -> p5E;
+    p5E -> 6 [label="1/-0.1"]
+    5 -> p5S;
+    p5S -> 2 [label="1/-0.1"]
+    5 -> p5W;
+    p5W -> 5 [label="1/-0.1"]
+
+    6 -> p6E;
+    p6E -> Terminal [label="1/-1"]
+
+    7 -> p7N;
+    p7N -> 7 [label="1/-0.1"]
+    7 -> p7E;
+    p7E -> 8 [label="1/-0.1"]
+    7 -> p7S;
+    p7S -> 4 [label="1/-0.1"]
+    7 -> p7W;
+    p7W -> 7 [label="1/-0.1"]
+
+    8 -> p8N;
+    p8N -> 8 [label="1/-0.1"]
+    8 -> p8E;
+    p8E -> 9 [label="1/-0.1"]
+    8 -> p8S;
+    p8S -> 8 [label="1/-0.1"]
+    8 -> p8W;
+    p8W -> 7 [label="1/-0.1"]
+
+    9 -> p9N;
+    p9N -> 9 [label="1/-0.1"]
+    9 -> p9E;
+    p9E -> 10 [label="1/-0.1"]
+    9 -> p9S;
+    p9S -> 5 [label="1/-0.1"]
+    9 -> p9W;
+    p9W -> 8 [label="1/-0.1"]
+
+    10 -> p10E;
+    p10E -> Terminal [label="1/1"]
+
+}

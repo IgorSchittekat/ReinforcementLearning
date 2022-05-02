@@ -1,0 +1,99 @@
+digraph G {
+	rankdir=LR;
+	node [shape = ellipse]; 
+    1111111111;
+    0000000000;
+    0000111111;
+    1100000011;
+    1111110000;
+    node [ shape = ellipse, label="..."];
+    dots1;
+    dots2;
+    node [shape = point, style = filled, color = black, label = "", height = 0.1 ];
+    left1[ xlabel = "left" ];
+    middle1[ xlabel = "middle" ];
+    right1[ xlabel = "right" ];
+    left2[ xlabel = "left" ];
+    middle2[ xlabel = "middle" ];
+    right2[ xlabel = "right" ];
+    left3[ xlabel = "left" ];
+    middle3[ xlabel = "middle" ];
+    right3[ xlabel = "right" ];
+    left4[ xlabel = "left" ];
+    middle4[ xlabel = "middle" ];
+    right4[ xlabel = "right" ];
+
+
+    1111111111 -> left1;
+    left1 -> 0000111111 [label="0.4 / 39"];
+    left1 -> 1100000011 [label="0.1 / 59"];
+    left1 -> 1111111111 [label="0.25 / -1"];
+    left1 -> 1111110000 [label="0.01 / 39"];
+    left1 -> 0000000000 [label="0.05 / 100"];
+    left1 -> dots1 [label="0.19/reward"];
+
+    1111111111 -> middle1;
+    middle1 -> 0000111111 [label="0.1 / 39"];
+    middle1 -> 1100000011 [label="0.4 / 59"];
+    middle1 -> 1111111111 [label="0.01 / -1"];
+    middle1 -> 1111110000 [label="0.1 / 39"];
+    middle1 -> 0000000000 [label="0.1 / 100"];
+    middle1 -> dots1 [label="0.29/reward"];
+
+    1111111111 -> right1;
+    right1 -> 0000111111 [label="0.01 / 39"];
+    right1 -> 1100000011 [label="0.1 / 59"];
+    right1 -> 1111111111 [label="0.25 / -1"];
+    right1 -> 1111110000 [label="0.4 / 39"];
+    right1 -> 0000000000 [label="0.05 / 100"];
+    right1 -> dots1 [label="0.19/reward"];
+
+    dots1 -> dots2 [style=dashed];
+    dots2 -> 0000000000 [style=dashed];
+
+    1100000011 -> left2;
+    left2 -> dots1 [label="0.79/reward"]
+    left2 -> 1100000011 [label="0.2/-1"]
+    left2 -> 0000000000 [label="0.01/40"]
+
+    1100000011 -> middle2;
+    middle2 -> dots1 [label="0.49/reward"]
+    middle2 -> 1100000011 [label="0.5/-1"]
+    middle2 -> 0000000000 [label="0.01/40"]
+
+    1100000011 -> right2;
+    right2 -> dots1 [label="0.79/reward"]
+    right -> 1100000011 [label="0.2/-1"]
+    right2 -> 0000000000 [label="0.01/40"]
+
+    0000111111 -> left3;
+    left3 -> dots1 [label="0.49/reward"]
+    left3 -> 0000111111 [label="0.5/-1"]
+    left3 -> 0000000000 [label="0.01/60"]
+
+    0000111111 -> middle3;
+    middle3 -> dots1 [label="0.7/reward"]
+    middle3 -> 0000111111 [label="0.2/-1"]
+    middle3 -> 0000000000 [label="0.1/60"]
+
+    0000111111 -> right3;
+    right3 -> dots1 [label="0.75/reward"]
+    right3 -> 0000111111 [label="0.1/-1"]
+    right3 -> 0000000000 [label="0.15/60"]
+
+    1111110000 -> left4;
+    left4 -> dots1 [label="0.75/reward"]
+    left4 -> 1111110000 [label="0.1/-1"]
+    left4 -> 0000000000 [label="0.15/60"]
+
+    1111110000 -> middle4;
+    middle4 -> dots1 [label="0.7/reward"]
+    middle4 -> 1111110000 [label="0.2/-1"]
+    middle4 -> 0000000000 [label="0.1/60"]
+
+    1111110000 -> right4;
+    right4 -> dots1 [label="0.49/reward"]
+    right4 -> 1111110000 [label="0.5/-1"]
+    right4 -> 0000000000 [label="0.01/60"]
+
+}

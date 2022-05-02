@@ -1,0 +1,32 @@
+digraph G {
+	rankdir=LR;
+	node [shape = ellipse]; 
+    0;
+    1;
+    4;
+    node [shape = point, style = filled, color = black, label = "", height = 0.1 ];
+    p0N[ xlabel = "N" ];
+    p0E[ xlabel = "E" ];
+    p0S[ xlabel = "S" ];
+    p0W[ xlabel = "W" ];
+    
+    0 -> p0N;
+    p0N -> 4 [label="0.8/-0.1"]
+    p0N -> 1 [label="0.1/-0.1"]
+    p0N -> 0 [label="0.1/-0.1"]
+    0 -> p0E;
+    p0E -> 1 [label="0.8/-0.1"]
+    p0E -> 4 [label="0.1/-0.1"]
+    p0E -> 0 [label="0.1/-0.1"]
+    0 -> p0S;
+    p0S -> 0 [label="0.8/-0.1"]
+    p0S -> 1 [label="0.1/-0.1"]
+    p0S -> 0 [label="0.1/-0.1"]
+    0 -> p0W;
+    p0W -> 0 [label="0.8/-0.1"]
+    p0W -> 4 [label="0.1/-0.1"]
+    p0W -> 0 [label="0.1/-0.1"]
+
+    
+
+}

@@ -1,0 +1,45 @@
+digraph G {
+	rankdir=LR;
+	node [shape = ellipse]; 
+    Reception;
+    Cleaning;
+    Terminal;
+    ChargingStation;
+    node [shape = point, style = filled, color = black, label = "", height = 0.1 ];
+    clean1[ xlabel = "clean" ];
+    clean2[ xlabel = "clean" ];
+    goBack1[ xlabel = "goBack" ];
+    goBack2[ xlabel = "goBack" ];
+    scanPass[ xlabel = "scanPass" ];
+    interact[ xlabel = "interact" ];
+    charge[ xlabel = "charge" ];
+    
+    Reception -> clean1;
+    clean1 -> Cleaning [label="1/0.1"]
+    
+    Cleaning -> clean2;
+    clean2 -> Cleaning [label="1/0.1"]
+
+    Cleaning -> goBack1;
+    goBack1 -> Reception [label="0.8/0"]
+    goBack1 -> ChargingStation [label="0.2/0"]
+
+    Reception -> scanPass;
+    scanPass -> Terminal [label="0.33/-1"]
+    scanPass -> Terminal [label="0.33/0"]
+    scanPass -> Terminal [label="0.33/1"]
+
+    Terminal -> interact;
+    interact -> Terminal [label="0.33/-1"]
+    interact -> Terminal [label="0.33/0"]
+    interact -> Terminal [label="0.33/1"]
+
+    Terminal -> goBack2;
+    goBack2 -> Reception [label="0.8/0"]
+    goBack2 -> ChargingStation [label="0.2/0"]
+    
+    ChargingStation -> charge;
+    charge -> Reception [label="0.1/0"]
+    charge -> ChargingStation [label="0.9/0"]
+
+}

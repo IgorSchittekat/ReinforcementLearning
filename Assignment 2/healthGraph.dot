@@ -1,0 +1,38 @@
+digraph G {
+	rankdir=LR;
+	node [shape = ellipse]; 
+    Healthy;
+    Sick;
+    SickNoMeds;
+    SickTakeMeds;
+    Dead;
+    node [shape = point, style = filled, color = black, label = "", height = 0.1 ];
+    doNothing[ xlabel = "doNothing" ];
+    healthCheck[ xlabel = "healthCheck" ];
+    MedsDescribed[ xlabel = "MedsDescribed" ];
+    wait1[ xlabel = "wait" ];
+    wait2[ xlabel = "wait" ];
+
+
+    Healthy -> doNothing;
+    doNothing -> Sick [label="0.25 / -1"];
+    doNothing -> Healthy [label="0.75 / 1"];
+
+    Healthy -> healthCheck;
+    healthCheck -> Sick [label="0.125 / -1"];
+    healthCheck -> Healthy [label="0.875 / 1"];
+
+    Sick -> MedsDescribed;
+    MedsDescribed -> SickNoMeds [label="0.1 / -1"];
+    MedsDescribed -> SickTakeMeds [label="0.9 / 1"];
+
+    SickNoMeds -> wait1;
+    wait1 -> Dead [label="0.8 / -1"];
+    wait1 -> Sick [label="0.2 / 0"];
+
+    SickTakeMeds -> wait2;
+    wait2 -> Dead [label="0.8 / -1"];
+    wait2 -> Sick [label="0.8 / 0"];
+    wait2 -> Healthy [label="0.8 / 1"];
+
+}
